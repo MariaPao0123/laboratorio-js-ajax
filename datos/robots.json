@@ -1,0 +1,8 @@
+{
+  "descripcion": "Archivo JSON de ejemplo para probar la petición AJAX",
+  "robots": [
+    { "nombre": "Pepper", "fabricante": "SoftBank Robotics", "tipo": "humanoide" },
+    { "nombre": "Sophia", "fabricante": "Hanson Robotics", "tipo": "humanoide" },
+    { "nombre": "Roomba", "fabricante": "iRobot", "tipo": "móvil" }
+  ]
+}

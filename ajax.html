@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio JS y AJAX | Ejercicio AJAX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="marca" href="index.html">Laboratorio <span>JS</span> + <span>AJAX</span></a>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Ejercicios JavaScript</a></li>
+          <li><a class="activo" href="ajax.html">Ejercicio AJAX</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h1>Peticiones AJAX con XMLHttpRequest</h1>
+    <p>Escribe una URL y pulsa «Mostrar Contenidos». La página la descarga en segundo plano, sin recargarse, y muestra el contenido, los estados de la petición, las cabeceras HTTP y el código de estado.</p>
+  </section>
+
+  <main class="contenedor">
+
+    <!-- ===== Formulario de la URL ===== -->
+    <section class="panel">
+      <form id="formulario">
+        <label for="recurso">URL a descargar</label>
+        <div class="formulario-url">
+          <input type="text" id="recurso" autocomplete="off">
+          <button type="submit" id="enviar">Mostrar Contenidos</button>
+        </div>
+      </form>
+      <div class="pruebas">
+        Probar con:
+        <button type="button" class="secundario" data-url="">Esta página</button>
+        <button type="button" class="secundario" data-url="datos/robots.json">Archivo JSON</button>
+        <button type="button" class="secundario" data-url="datos/mensaje.txt">Archivo de texto</button>
+        <button type="button" class="secundario" data-url="datos/no-existe.html">Archivo inexistente (404)</button>
+      </div>
+      <!-- Este aviso solo se muestra si la página se abre con doble clic (file://) -->
+      <p id="aviso-local" class="aviso" hidden>
+        Has abierto la página directamente desde el disco (<code>file://</code>). Los navegadores bloquean las peticiones AJAX en ese caso:
+        ábrela con <strong>Live Server</strong> en VS Code o desde el sitio publicado.
+      </p>
+    </section>
+
+    <!-- ===== Zonas de resultados ===== -->
+    <div class="zonas">
+
+      <section class="zona">
+        <h2>Estados de la petición</h2>
+        <ul id="estados" class="lista-estados">
+          <li>No iniciada <span class="tiempo">—</span></li>
+        </ul>
+      </section>
+
+      <section class="zona">
+        <h2>Código de estado</h2>
+        <div id="codigo" class="codigo-estado">—</div>
+        <p id="codigo-texto" class="detalle">Todavía no se ha hecho ninguna petición.</p>
+      </section>
+
+      <section class="zona ancha">
+        <h2>Cabeceras HTTP de la respuesta del servidor</h2>
+        <pre id="cabeceras">—</pre>
+      </section>
+
+      <section class="zona ancha">
+        <h2>Contenidos del archivo</h2>
+        <pre id="contenidos">—</pre>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 · Laboratorio de Tecnologías JavaScript y AJAX · Desarrollo de Aplicaciones en Red (UNIR)</p>
+  </footer>
+
+  <script src="js/ajax.js"></script>
+</body>
+</html>

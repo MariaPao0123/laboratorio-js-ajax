@@ -1,0 +1,5 @@
+Hola desde el servidor.
+
+Este archivo de texto se ha descargado con una petición AJAX (XMLHttpRequest),
+sin recargar la página. Su contenido se muestra tal cual en la zona
+"Contenidos del archivo".

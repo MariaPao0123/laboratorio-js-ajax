@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio JS y AJAX | Ejercicios JavaScript</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="marca" href="index.html">Laboratorio <span>JS</span> + <span>AJAX</span></a>
+      <nav>
+        <ul class="menu">
+          <li><a class="activo" href="index.html">Ejercicios JavaScript</a></li>
+          <li><a href="ajax.html">Ejercicio AJAX</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h1>Ejercicios de JavaScript</h1>
+    <p>Escribe los datos en cada tarjeta y pulsa el botón (o la tecla Intro). Todo se calcula en el navegador con JavaScript, sin recargar la página.</p>
+  </section>
+
+  <main class="contenedor">
+    <div class="rejilla">
+
+      <!-- ===== Ejercicio 1 ===== -->
+      <article class="tarjeta">
+        <span class="numero">Ejercicio 1</span>
+        <h2>¿Es un palíndromo?</h2>
+        <p class="enunciado">Detecta si el texto se lee igual de izquierda a derecha que al revés. Se ignoran espacios, signos, mayúsculas y tildes.</p>
+        <form id="form-palindromo">
+          <label for="texto-palindromo">Palabra o frase</label>
+          <input type="text" id="texto-palindromo" placeholder="Ej.: Anita lava la tina">
+          <button type="submit">Comprobar</button>
+        </form>
+        <div id="res-palindromo" class="resultado" aria-live="polite"></div>
+      </article>
+
+      <!-- ===== Ejercicio 2 ===== -->
+      <article class="tarjeta">
+        <span class="numero">Ejercicio 2</span>
+        <h2>¿Cuál es el número mayor?</h2>
+        <p class="enunciado">Pide dos números y muestra cuál es el mayor. Admite decimales y negativos.</p>
+        <form id="form-mayor">
+          <div class="fila-numeros">
+            <div>
+              <label for="numero1">Primer número</label>
+              <input type="number" id="numero1" step="any" placeholder="Ej.: 15">
+            </div>
+            <div>
+              <label for="numero2">Segundo número</label>
+              <input type="number" id="numero2" step="any" placeholder="Ej.: 42.5">
+            </div>
+          </div>
+          <button type="submit">Comparar</button>
+        </form>
+        <div id="res-mayor" class="resultado" aria-live="polite"></div>
+      </article>
+
+      <!-- ===== Ejercicio 3 ===== -->
+      <article class="tarjeta">
+        <span class="numero">Ejercicio 3</span>
+        <h2>Vocales que aparecen</h2>
+        <p class="enunciado">Pide una frase y escribe qué vocales aparecen en ella (las vocales con tilde cuentan como su vocal).</p>
+        <form id="form-vocales">
+          <label for="frase-vocales">Frase</label>
+          <input type="text" id="frase-vocales" placeholder="Ej.: El robot camina despacio">
+          <button type="submit">Buscar vocales</button>
+        </form>
+        <div id="res-vocales" class="resultado" aria-live="polite"></div>
+      </article>
+
+      <!-- ===== Ejercicio 4 ===== -->
+      <article class="tarjeta">
+        <span class="numero">Ejercicio 4</span>
+        <h2>¿Cuántas veces aparece cada vocal?</h2>
+        <p class="enunciado">Pide una frase y cuenta las apariciones de cada vocal, mostrándolas en un pequeño gráfico de barras.</p>
+        <form id="form-conteo">
+          <label for="frase-conteo">Frase</label>
+          <input type="text" id="frase-conteo" placeholder="Ej.: La inteligencia artificial aprende de los datos">
+          <button type="submit">Contar vocales</button>
+        </form>
+        <div id="res-conteo" class="resultado" aria-live="polite"></div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 · Laboratorio de Tecnologías JavaScript y AJAX · Desarrollo de Aplicaciones en Red (UNIR)</p>
+  </footer>
+
+  <!-- El script va al final para que los formularios ya existan cuando se ejecute -->
+  <script src="js/ejercicios.js"></script>
+</body>
+</html>
